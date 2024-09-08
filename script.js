@@ -47,6 +47,7 @@ function initTyping(e) {
       mistake--;
     }
     char[charIndex].classList.remove("correct", "incorrect", "active");
+    char[charIndex].classList.add("active");
     mistakes.innerHTML = mistake;
     cpm.innerHTML = charIndex - mistake;
     return;
