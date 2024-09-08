@@ -74,7 +74,7 @@ function initTyping(e) {
     }
     if (charIndex === char.length) {
       clearInterval(timer);
-      input.disabled = true;
+      typingText.disabled = true;
     }
   }
 }
@@ -104,7 +104,7 @@ function reset() {
   wpm.innerText = 0;
   cpm.innerText = 0;
   mistakes.innerText = 0;
-  input.disabled = false;
+  typingText.disabled = false;
 }
 
 input.addEventListener("input", initTyping);
