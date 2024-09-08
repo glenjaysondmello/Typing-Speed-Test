@@ -76,14 +76,13 @@ body {
   line-height: 1;
   list-style: none;
   overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
   position: relative;
   text-align: left;
   text-decoration: none;
   transition: box-shadow 0.15s, transform 0.15s;
   user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
   will-change: box-shadow, transform;
@@ -104,6 +103,10 @@ body {
 .content button:active {
   box-shadow: #d6d6e7 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+button span {
+  padding: 13px;
 }
 
 .typing-text p {
