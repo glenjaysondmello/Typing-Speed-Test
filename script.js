@@ -62,12 +62,15 @@ function initTyping(e) {
       isTyping = true;
     }
 
-    if (char[charIndex].innerHTML === typedChar) {
+    if (typedChar === " " && char[charIndex].innerHTML === "&nbsp;") {
+      char[charIndex].classList.add("correct");
+    } else if (char[charIndex].innerHTML === typedChar) {
       char[charIndex].classList.add("correct");
     } else {
       mistake++;
       char[charIndex].classList.add("incorrect");
     }
+
     charIndex++;
     mistakes.innerHTML = mistake;
     cpm.innerText = charIndex - mistake;
