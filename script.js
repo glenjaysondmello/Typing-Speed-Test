@@ -106,7 +106,6 @@ function reset() {
   wpm.innerText = 0;
   cpm.innerText = 0;
   mistakes.innerText = 0;
-  typingText.disabled = false;
   btn.innerHTML = "Start Over";
 }
 
