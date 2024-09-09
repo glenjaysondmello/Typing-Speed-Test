@@ -30,6 +30,7 @@ function loadParagraph() {
   const randomIndex = Math.floor(Math.random() * paragraph.length);
   typingText.innerHTML = "";
   btn.addEventListener("click", () => {
+    typingText.innerHTML = "";
     for (const char of paragraph[randomIndex]) {
       typingText.innerHTML += `<span>${char}</span>`;
     }
@@ -106,6 +107,7 @@ function reset() {
   wpm.innerText = 0;
   cpm.innerText = 0;
   mistakes.innerText = 0;
+  typingText.disabled = false;
   btn.innerHTML = "Start Over";
 }
 
