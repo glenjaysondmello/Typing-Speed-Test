@@ -29,15 +29,12 @@ function loadParagraph() {
 
   const randomIndex = Math.floor(Math.random() * paragraph.length);
   typingText.innerHTML = "";
-  btn.addEventListener("click", () => {
-    typingText.innerHTML = "";
-    for (const char of paragraph[randomIndex]) {
-      typingText.innerHTML += `<span>${char}</span>`;
-    }
-    typingText.querySelectorAll("span")[0].classList.add("active");
-    document.addEventListener("keydown", () => input.focus());
-    typingText.addEventListener("click", input.focus());
-  });
+  for (const char of paragraph[randomIndex]) {
+    typingText.innerHTML += `<span>${char}</span>`;
+  }
+  typingText.querySelectorAll("span")[0].classList.add("active");
+  document.addEventListener("keydown", () => input.focus());
+  typingText.addEventListener("click", input.focus());
 }
 
 function initTyping(e) {
