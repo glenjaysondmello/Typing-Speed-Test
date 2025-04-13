@@ -31,7 +31,7 @@ function loadParagraph() {
   typingText.innerHTML = "";
   btn.addEventListener("click", () => {
     typingText.innerHTML = "";
-    for (const char of paragraph[randomIndex]) {
+    for (let char of paragraph[randomIndex]) {
       typingText.innerHTML += `<span>${char}</span>`;
     }
     typingText.querySelectorAll("span")[0].classList.add("active");
