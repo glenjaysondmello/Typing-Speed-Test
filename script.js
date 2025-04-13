@@ -62,9 +62,7 @@ function initTyping(e) {
       isTyping = true;
     }
 
-    if (typedChar === " " && char[charIndex].innerHTML === "&nbsp;") {
-      char[charIndex].classList.add("correct");
-    } else if (char[charIndex].innerHTML === typedChar) {
+    if (char[charIndex].innerHTML === typedChar) {
       char[charIndex].classList.add("correct");
     } else {
       mistake++;
